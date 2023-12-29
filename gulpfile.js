@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+
 var csso = require('gulp-csso');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
@@ -87,5 +88,17 @@ gulp.task('watch', function() {
   gulp.watch('src/img/**/*.{jpg,png,gif}', gulp.series(['imagemin']));
   gulp.watch(['*html', '_includes/*html', '_layouts/*.html'], gulp.series(['jekyll-rebuild']));
 });
+
+gulp.task('browser-sync', gulp.series(['jekyll-build'], function(done) {
+	browserSync({
+	  server: {
+		baseDir: '_site'
+	  },
+	  open: false, // Prevent the browser from opening automatically
+	  notify: false // Disable notifications
+	});
+	done();
+  }));
+  
 
 gulp.task('default', gulp.series(['js', 'sass', 'fonts', 'browser-sync', 'watch']));

@@ -1,15 +1,16 @@
 # Site settings
-title: A blog about lorem ipsum dolor sit amet
-description: A blog about lorem ipsum dolor sit amet
+#title: "Venus - Portfolio"
+#description: A blog about lorem ipsum dolor sit amet2
+auto: true
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
-username: Anon Developer
-user_description: Bicycle rights irony actually neutra typewriter lyft. Man bun taxidermy put a bird on it, umami yr ramps pop-up ugh bushwick chia lo-fi. Occupy bitters pour-over snackwave you probably haven't heard of them small batch. Cornhole mustache man bun letterpress echo park VHS.
+username: Venus Thoungvitayasutee
+user_description: "<p>A seasoned professional with <strong>5+ years</strong> of experience in Technology Consulting and Data Analysis, primarily at <span style='color: #00338D;'><strong>KPMG</strong></span> and <span style='color: #A100FF;'><strong>Accenture</strong></span>. My expertise spans <strong>Data Analytics, Robotic & Data Process Automation, Digital Audit and Business Process Improvement</strong>. Recently, I completed an internship at <span style='color: #D29C00;'><strong>Interac</strong></span> as a Technical Service Management Analyst. Currently, pursuing an advanced degree in Software Engineering specialized in Artificial Intelligence in Toronto, Canada. I am passionate about working with diverse teams and committed to innovative solutions in AI and data.</p>"
 user_title: Software Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
+email: venus.sirada@gmail.com
+#twitter_username: lorem_ipsum
 github_username:  lorem_ipsum
 gplus_username:  lorem_ipsum
 
