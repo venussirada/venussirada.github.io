@@ -1,0 +1,54 @@
+<div class="home-icon" style="display: flex; align-items: center; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+    <a class="project-link" href="/" style="background-color: rgb(189, 207, 243); color: rgb(50, 100, 150); border: 1px solid rgb(50, 100, 150); font-weight: bold; display: inline-flex; align-items: center; padding: 10px; border-radius: 50%; margin-right: 10px;">
+        <i class="fa fa-home" style="font-size: 24px; vertical-align: middle;"></i>
+    </a>
+    <h1 class="title" style="font-size: 28px; margin: 5px 0; color: #333;" id="scroll-to">Spam Detection</h1>
+  </div>
+  <a class="down" href="#scroll-to" data-scroll>
+    <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+  </a>
+  
+  <div class="custom-user-projects">
+    <div class="step" style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin-top: 20px;">
+        <h3 class="title">Data Exploration</h3>
+        <p>1. Explored the 57-column dataset of KSI (Killed or Seriously Injured) dataset.</p>
+        <p>2. Performed feature selection using various techniques:</p>
+        <ul>
+            <li>Chi-Square Value Score</li>
+            <li>Correlation Heatmap</li>
+            <li>Scatter Matrix</li>
+            <li>Histogram Data</li>
+            <li>Missing Values</li>
+            <li>Data Analysis</li>
+            <img alt="chi" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+            <img alt="corre" src="{{ '/assets/img/correlation.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+            <img alt="corre" src="{{ '/assets/img/scatter.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+            <img alt="corre" src="{{ '/assets/img/histo.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+  
+        </ul>
+        <h3 class="title">Data Cleaning</h3>
+        <p>1. Handle Missing Values: Remove the columns which more than 80% of data were missing. Remove rows for columns with less than 3% of missing values.</p>
+        <p>2. Encoding Categorical Variables: Group data under the same category. And converted certain attributes into binary format such as 'Yes' and 'No'</p>
+        <p>3. Scaling Numberical Features: Adapted Sci-kit learn preprocessing to perform min-max scaling of the data </p>
+        <p>4. Derived new feature to provide more context such as creating a weekend feature based on date column</p>
+        <h3 class="title">Model Building</h3>
+        <p>1. Splited data into training and testing set</p>
+        <img alt="traintest" src="{{ '/assets/img/data_model1.png' | prepend: site.baseurl }}" style="height: 200px; width: auto;" />
+        <p>2. Implemented machine learning models including Logistic Regression, Random Forest, Decision Tree, Support Vector Classification, Neural Network by leveraging from Sci-kit learn</p>
+        <p>3. Ran and listed the accuracy score of all models.</p>
+        <img alt="score_logis" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+        <img alt="score_random" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+        <img alt="score_decision" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+        <img alt="score_svc" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+        <img alt="score_nn" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
+  
+        <h3 class="title">Prediction</h3>
+        <p>1. Integrated all models with flask API for fatality prediction.</p>
+        <ul>
+          <li>User can predict fatal by select data input</li>
+          <li>Then select the classifier that user is interested in.</li>
+          <li>Then the predict result will show.</li>
+      </ul>
+    </div>
+  </div>
+  

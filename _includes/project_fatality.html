@@ -1,0 +1,88 @@
+<div class="home-icon" style="display: flex; align-items: center; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+  <a class="project-link" href="/" style="background-color: rgb(189, 207, 243); color: rgb(50, 100, 150); border: 1px solid rgb(50, 100, 150); font-weight: bold; display: inline-flex; align-items: center; padding: 10px; border-radius: 50%; margin-right: 10px;">
+      <i class="fa fa-home" style="font-size: 24px; vertical-align: middle;"></i>
+  </a>
+  <h1 class="title" style="font-size: 28px; margin: 5px 0; color: #333;" id="scroll-to">Predictive Machine Learning Model for Fatal Accident</h1>
+</div>
+<a class="down" href="#scroll-to" data-scroll>
+  <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+</a>
+
+<div class="custom-user-projects">
+  <div class="step" style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin-top: 20px;">
+      <h3 class="title">Data Exploration</h3>
+      <p>1. Explored the 57-column dataset of KSI (Killed or Seriously Injured) dataset.</p>
+      <p>2. Performed feature selection using various techniques:</p>
+      <ul>
+          <li>Chi-Square Value Score</li>
+          <li>Correlation Heatmap</li>
+          <li>Scatter Matrix</li>
+          <li>Histogram Data</li>
+          <li>Missing Values</li>
+          <li>Data Analysis</li>
+          <div class="image-container">
+            <img src="{{ '/assets/img/data_explore.png' | prepend: site.baseurl }}" alt="chi" />
+            <div class="caption"></div>
+          </div>  
+      </ul>
+      <h3 class="title">Data Cleaning</h3>
+      <p>1. Handle Missing Values: Remove the columns which more than 80% of data were missing. Remove rows for columns with less than 3% of missing values.</p>
+      <p>2. Encoding Categorical Variables: Group data under the same category. And converted certain attributes into binary format such as 'Yes' and 'No'</p>
+      <p>3. Scaling Numberical Features: Adapted Sci-kit learn preprocessing to perform min-max scaling of the data </p>
+      <p>4. Derived new feature to provide more context such as creating a weekend feature based on date column</p>
+      <h3 class="title">Model Building</h3>
+      <p>1. Splited data into training and testing set</p>
+      <div class="image-container">
+        <img src="{{ '/assets/img/data_model1.png' | prepend: site.baseurl }}" alt="traintest" style="width: 800px; height: auto;"/>
+        <div class="caption">Train Test Split Visualization</div>
+      </div>
+          <p>2. Implemented machine learning models including Logistic Regression, Random Forest, Decision Tree, Support Vector Classification, Neural Network by leveraging from Sci-kit learn</p>
+      <p>3. Ran and listed the accuracy score of all models.</p>
+      <div class="image-section" style="margin-top: 20px;">
+      <div class="image-container">
+        <img src="/assets/img/logis_accuracy.png" alt="Score Logis" style="height: 200px; width: 500px;" />
+        <div class="caption">Logistic Accuracy</div>
+    </div>
+    <div class="image-container">
+      <img src="/assets/img/rf_accuracy.png" alt="Score Random" style="height: 200px; width: 500px;" />
+      <div class="caption">Random Forest Accuracy</div>
+    </div>
+    <div class="image-container">
+      <img src="/assets/img/dt_accuracy.png" alt="Score Decision" style="height: 200px; width: 500px;" />
+      <div class="caption">Decision Tree Accuracy</div>
+    </div>      
+    <div class="image-container">
+      <img src="/assets/img/svc_accuracy.png" alt="Score SVC" style="height: 200px; width: 500px;" />
+      <div class="caption">SVC Accuracy</div>
+    </div>      
+    <div class="image-container">
+      <img src="/assets/img/nn_accuracy.png" alt="Score NN" style="height: 200px; width: 500px;" />
+      <div class="caption">Neural Network Accuracy</div>
+    </div>
+  </div>
+
+      <h3 class="title">Prediction</h3>
+      <p>1. Integrated all models with flask API for fatality prediction.</p>
+      <ul>
+        <li>User can predict fatal by select data input</li>
+        <div class="image-container">
+          <img src="/assets/img/select_input2.jpg" alt="Score SVC" style="height: 200px; width: 500px;" />
+          <div class="caption">Inputting data</div>
+        </div>  
+        <li>Then select the classifier that user is interested in.</li>
+        <div class="image-container">
+          <img src="/assets/img/select_classifier.jpg" alt="Score SVC" style="height: 200px; width: 500px;" />
+          <div class="caption">Select classifier</div>
+        </div>  
+        <li>Then the predict result will show.</li>
+        <div class="image-container">
+          <img src="/assets/img/fatality_1.png" alt="Fatal" style="height: 200px; width: 500px;" />
+          <div class="caption">Non-Fatal Result</div>
+        </div>
+        <div class="image-container">
+          <img src="/assets/img/fatality1.jpg" alt="NonFatal" style="height: 200px; width: 500px;" />
+          <div class="caption">Fatal Result</div>
+        </div>
+    </ul>
+  </div>
+</div>

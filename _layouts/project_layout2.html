@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Add the favicon link here -->
+  <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+  
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+
+  <!-- Standard Favicon Sizes -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+
+  <!-- Web App Manifest (for Progressive Web Apps) -->
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+  <!-- Other Meta Tags and Stylesheets -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add other meta tags and stylesheets as needed -->
+
+  <!-- Set a custom title for project details pages -->
+  <title>{{ page.title }}</title>
+  {% include head.html %}
+</head>
+<body>
+  {% include header2.html %}
+  <section id="project_spam_detection">
+    {% include project_spam_detection.html %}
+  </section>
+  {% include footer.html %}
+</body>
+</html>

@@ -12,10 +12,14 @@ user_title: Data Analyst & Technology Consultant
 email: venus.sirada@gmail.com
 twitter_username: https://www.linkedin.com/in/siradat/
 github_username:  https://github.com/venussirada
+tableau_username: https://public.tableau.com/app/profile/venus.sirada/vizzes
 gplus_username:  lorem_ipsum
 
 # Google-analytics
 google-analytics:
   id: ""
+
+destination: _site
+
 
 exclude: ['package.json', 'src' , 'node_modules']
