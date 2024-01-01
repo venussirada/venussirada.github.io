@@ -1,54 +1,94 @@
 <div class="home-icon" style="display: flex; align-items: center; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
-    <a class="project-link" href="/" style="background-color: rgb(189, 207, 243); color: rgb(50, 100, 150); border: 1px solid rgb(50, 100, 150); font-weight: bold; display: inline-flex; align-items: center; padding: 10px; border-radius: 50%; margin-right: 10px;">
-        <i class="fa fa-home" style="font-size: 24px; vertical-align: middle;"></i>
-    </a>
-    <h1 class="title" style="font-size: 28px; margin: 5px 0; color: #333;" id="scroll-to">Spam Detection</h1>
-  </div>
-  <a class="down" href="#scroll-to" data-scroll>
-    <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+  <!--
+  <a class="project-link" href="/" style="background-color: rgb(189, 207, 243); color: rgb(50, 100, 150); border: 1px solid rgb(50, 100, 150); font-weight: bold; display: inline-flex; align-items: center; padding: 10px; border-radius: 50%; margin-right: 10px;">
+      <i class="fa fa-home" style="font-size: 24px; vertical-align: middle;"></i>
   </a>
-  
-  <div class="custom-user-projects">
-    <div class="step" style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin-top: 20px;">
-        <h3 class="title">Data Exploration</h3>
-        <p>1. Explored the 57-column dataset of KSI (Killed or Seriously Injured) dataset.</p>
-        <p>2. Performed feature selection using various techniques:</p>
-        <ul>
-            <li>Chi-Square Value Score</li>
-            <li>Correlation Heatmap</li>
-            <li>Scatter Matrix</li>
-            <li>Histogram Data</li>
-            <li>Missing Values</li>
-            <li>Data Analysis</li>
-            <img alt="chi" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-            <img alt="corre" src="{{ '/assets/img/correlation.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-            <img alt="corre" src="{{ '/assets/img/scatter.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-            <img alt="corre" src="{{ '/assets/img/histo.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-  
-        </ul>
-        <h3 class="title">Data Cleaning</h3>
-        <p>1. Handle Missing Values: Remove the columns which more than 80% of data were missing. Remove rows for columns with less than 3% of missing values.</p>
-        <p>2. Encoding Categorical Variables: Group data under the same category. And converted certain attributes into binary format such as 'Yes' and 'No'</p>
-        <p>3. Scaling Numberical Features: Adapted Sci-kit learn preprocessing to perform min-max scaling of the data </p>
-        <p>4. Derived new feature to provide more context such as creating a weekend feature based on date column</p>
-        <h3 class="title">Model Building</h3>
-        <p>1. Splited data into training and testing set</p>
-        <img alt="traintest" src="{{ '/assets/img/data_model1.png' | prepend: site.baseurl }}" style="height: 200px; width: auto;" />
-        <p>2. Implemented machine learning models including Logistic Regression, Random Forest, Decision Tree, Support Vector Classification, Neural Network by leveraging from Sci-kit learn</p>
-        <p>3. Ran and listed the accuracy score of all models.</p>
-        <img alt="score_logis" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-        <img alt="score_random" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-        <img alt="score_decision" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-        <img alt="score_svc" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-        <img alt="score_nn" src="{{ '/assets/img/chi-square.png' | prepend: site.baseurl }}" style="height: 200px; width: 500px;" />
-  
-        <h3 class="title">Prediction</h3>
-        <p>1. Integrated all models with flask API for fatality prediction.</p>
-        <ul>
-          <li>User can predict fatal by select data input</li>
-          <li>Then select the classifier that user is interested in.</li>
-          <li>Then the predict result will show.</li>
+-->
+<h1 class="title" style="font-size: 28px; color: #333; margin: -20px 0 5px 20px; flex-grow: 1; text-align: center;" id="scroll-to">Spam Detection</h1>
+</div>
+<a class="down" href="#scroll-to" data-scroll>
+  <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+</a>
+
+<div class="overview-section" style="padding: 20px; background-color: #f9f9f9; border-radius: 5px; margin-top: -50px;">
+  <h2 style="font-size: 24px; color: #333;">Project Overview</h2>
+  <p>This Python-based project focuses on developing a model to identify spam comments on YouTube, addressing the challenge of excessive spam comments across the internet.</p>
+</div>
+
+<div class="custom-user-projects" style="margin-bottom: -90px;">
+  <!-- Data Exploration -->
+  <div class="step" style="background-color: #f9f9f9; padding: 20px; border-radius: 5px; margin-top: 20px;">
+    <h3 class="title" style="font-size: 22px; color: #333;">Data Exploration</h3>
+    <p>Loaded and explored data using python to analyze the data format through various methods:
+      <ul>
+        <li>Analyzed dataframe information (shape, info, describe, and head of the data).</li>
+        <li>Performed URL identificatio. As URLs are often used in spam comments, identifying the URL is useful for spam detection.</li>
+        <li>Conducted emoji identification.</li>
+        <li>Identified Non-English and non-numeric text.</li>
+        <li>Filtered out unrelated features. Drop columns such as comment_id, author and, date that were not relevant to the analysis.</li>
       </ul>
-    </div>
+      </p>
+      <div class="image-container">
+        <img src="/assets/img/Dataexploration.png" alt="Score SVC" style="height: 400px; width: auto;" />
+        <div class="caption"></div>
+      </div> 
+ <h3 class="title" style="font-size: 22px; color: #333;">Data Preprocessing</h3>
+    <p>Performed data preprocessing using methods such as stopwords, WordNet, and Punkt from NLTK and performed below steps:
+      <ul>
+        <li>URL replacement</li>
+        <li>Lowercase text</li>
+        <li>Punctuation mark removement</li>
+        <li>Text tokenization</li>
+        <li>Word stemming</li>
+        <li>Word lemmatization</li>
+      </ul>
+    </p>
+    <div class="image-container">
+      <img src="/assets/img/Datapreprocessing.png" alt="Score SVC" style="height: 400px; width: auto;" />
+      <div class="caption"></div>
+    </div> 
+    <h3 class="title" style="font-size: 22px; color: #333;">Downscale the Transformed Data</h3>
+    <p>Weighted each vocaburaly against the total words by transforming data using TF-IDF (Term Frequency - Inverse Document Frequency).
+    </p>
+    <div class="image-container">
+      <img src="/assets/img/Datatransformation.png" alt="Score SVC" style="height: 180px; width: auto;" />
+      <div class="caption"></div>
+    </div> 
+    <h3 class="title" style="font-size: 22px; color: #333;">Shuffle Dataset</h3>
+    <p>Shuffled all rows in the dataset to reduce bias in the data order.
+    </p>
+    <div class="image-container">
+      <img src="/assets/img/Datashuffling.png" alt="Score SVC" style="height: 180px; width: auto;" />
+      <div class="caption"></div>
+    </div> 
+    <h3 class="title" style="font-size: 22px; color: #333;">Training the Dataset by:</h3>
+    <p>
+      <ul>
+        <li>Split the dataset into training and testing subsets.</li>
+        <li>Trained the model using the training subset.</li>
+        <li>Divided the testing dataset into 5 equal parts using the cross-validation method.</li>
+    </ul>
+    </p>
+    <div class="image-container">
+      <img src="/assets/img/Datasettraining.png" alt="Score SVC" style="height: 500px; width: auto;" />
+      <div class="caption"></div>
+    </div> 
+    <h3 class="title" style="font-size: 22px; color: #333;">Test the Data</h3>
+    <p><ul>
+      <li>Input test data consisting of 4 non-spam and 2 spam comments.</li>
+      <li>Ran the prediction model.</li>
+      <li>The results are displayed below, where a predicted class of 0 indicates non-spam, and 1 indicates spam.</li>
+  </ul>
+    </p>
+    <div class="image-container">
+      <img src="/assets/img/testresult.png" alt="Score SVC" style="height: 500px; width: auto;" />
+      <div class="caption"></div>
+    </div> 
   </div>
-  
+
+  <div class="home-icon" style="display: flex; align-items: center; justify-content: center; background-color: #f9f9f9; padding: 20px; margin-top: -50px; border-radius: 10px;">
+    <a class="project-link" href="/" style="display: inline-flex; align-items: center; justify-content: center; background-color: #bdd5f3; color: #326496; border: 2px solid #326496; font-weight: bold; padding: 10px 15px; border-radius: 8px; text-decoration: none;">
+        <i class="fa fa-home" style="font-size: 24px; margin-right: 8px;"></i>Back to Home
+    </a>
+</div>
+</div>
